@@ -32,6 +32,7 @@ public class CatBeanDao extends AbstractDao<CatBean, String> {
         public final static Property Huawen = new Property(5, String.class, "huawen", false, "HUAWEN");
         public final static Property Skin = new Property(6, String.class, "skin", false, "SKIN");
         public final static Property Tail = new Property(7, String.class, "tail", false, "TAIL");
+        public final static Property Picname = new Property(8, String.class, "picname", false, "PICNAME");
     }
 
 
@@ -86,6 +87,11 @@ public class CatBeanDao extends AbstractDao<CatBean, String> {
         if (tail != null) {
             stmt.bindString(8, tail);
         }
+ 
+        String picname = entity.getPicname();
+        if (picname != null) {
+            stmt.bindString(9, picname);
+        }
     }
 
     @Override
@@ -131,6 +137,11 @@ public class CatBeanDao extends AbstractDao<CatBean, String> {
         if (tail != null) {
             stmt.bindString(8, tail);
         }
+ 
+        String picname = entity.getPicname();
+        if (picname != null) {
+            stmt.bindString(9, picname);
+        }
     }
 
     @Override
@@ -148,7 +159,8 @@ public class CatBeanDao extends AbstractDao<CatBean, String> {
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // mouse
             cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // huawen
             cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6), // skin
-            cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7) // tail
+            cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7), // tail
+            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8) // picname
         );
         return entity;
     }
@@ -163,6 +175,7 @@ public class CatBeanDao extends AbstractDao<CatBean, String> {
         entity.setHuawen(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
         entity.setSkin(cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6));
         entity.setTail(cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7));
+        entity.setPicname(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
      }
     
     @Override

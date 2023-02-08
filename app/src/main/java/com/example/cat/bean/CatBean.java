@@ -5,7 +5,7 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.Generated;
 
-@Entity(createInDb = false,nameInDb = "cat")
+@Entity(createInDb = false, nameInDb = "cat")
 public class CatBean {
 
     @Id
@@ -27,10 +27,11 @@ public class CatBean {
     String skin;
     @Property
     String tail;
+    String picname;
 
-    @Generated(hash = 1348218743)
+    @Generated(hash = 427248230)
     public CatBean(String theme, String type, String ear, String eye, String mouse,
-                   String huawen, String skin, String tail) {
+                   String huawen, String skin, String tail, String picname) {
         this.theme = theme;
         this.type = type;
         this.ear = ear;
@@ -39,6 +40,7 @@ public class CatBean {
         this.huawen = huawen;
         this.skin = skin;
         this.tail = tail;
+        this.picname = picname;
     }
 
     @Generated(hash = 1152680801)
@@ -122,5 +124,13 @@ public class CatBean {
                 ", skin='" + skin + '\'' +
                 ", tail='" + tail + '\'' +
                 '}';
+    }
+
+    public String getPicname() {
+        return this.picname;
+    }
+
+    public void setPicname(String picname) {
+        this.picname = picname;
     }
 }

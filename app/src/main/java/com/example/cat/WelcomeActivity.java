@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+
 public class WelcomeActivity extends BaseActivity {
 
     private static final String DB_NAME = "cat.db";
@@ -27,6 +28,15 @@ public class WelcomeActivity extends BaseActivity {
         }
 
 
+    }
+
+    @Override
+    public void loadData() {
+
+    }
+
+    @Override
+    public void initView() {
     }
 
     private void copyDataBase() throws IOException {

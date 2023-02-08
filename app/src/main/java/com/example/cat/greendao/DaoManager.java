@@ -13,7 +13,7 @@ import org.greenrobot.greendao.query.QueryBuilder;
  */
 public class DaoManager {
     private static final String TAG = DaoManager.class.getSimpleName();
-    private static final String DB_NAME = "RECORD_DB";
+    private static final String DB_NAME = "cat.db";
 
     private Application mApplication;
 
@@ -43,7 +43,7 @@ public class DaoManager {
      */
     public DaoMaster getDaoMaster() {
         if (mDaoMaster == null) {
-            DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(mApplication, DB_NAME, null);
+            DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(mApplication, DB_NAME);
             mDaoMaster = new DaoMaster(helper.getWritableDatabase());
         }
         return mDaoMaster;
