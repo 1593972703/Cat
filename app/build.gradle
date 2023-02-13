@@ -55,6 +55,8 @@ dependencies {
     implementation 'io.github.youth5201314:banner:2.2.2'
 
     implementation 'com.belerweb:pinyin4j:2.5.0'
+    implementation 'com.tencent:mmkv-static:1.2.10'
+
 }
 
 greendao {
