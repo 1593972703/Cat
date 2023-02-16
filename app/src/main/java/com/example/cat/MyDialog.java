@@ -3,6 +3,7 @@ package com.example.cat;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.Gravity;
@@ -59,6 +60,7 @@ public class MyDialog extends AlertDialog {
         setContentView(listView);
 
         listView.setDivider(null);
+        listView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         stringArrayAdapter = new ArrayAdapter<>(mContext, R.layout.item_spinner, stringList);
         listView.setAdapter(stringArrayAdapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
@@ -70,7 +72,7 @@ public class MyDialog extends AlertDialog {
         getWindow().setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.bg_button));
 
         getWindow().setLayout(
-                ScreenUtils.getScreenWidth(mContext) * 2 / 5,
+                ScreenUtils.getScreenWidth(mContext) * 3 / 5,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
     }
