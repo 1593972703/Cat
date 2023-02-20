@@ -4,6 +4,7 @@
     package="com.example.cat">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="任意字符"
         android:dataExtractionRules="@xml/data_extraction_rules"
